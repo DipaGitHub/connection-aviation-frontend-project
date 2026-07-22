@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Connection Aviation design system - deep navy + royal purple */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 60% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 60% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 60% 12%;
+
+    /* Brand: deep navy/purple from logo */
+    --primary: 245 75% 25%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 270 60% 45%;
+
+    --secondary: 230 50% 96%;
+    --secondary-foreground: 245 75% 25%;
+
+    --muted: 230 30% 96%;
+    --muted-foreground: 240 10% 45%;
+
+    --accent: 270 60% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 230 30% 90%;
+    --input: 230 30% 90%;
+    --ring: 245 75% 25%;
+
+    --radius: 0.5rem;
+
+    /* Brand specific */
+    --brand-navy: 245 75% 22%;
+    --brand-purple: 270 55% 40%;
+    --brand-light-bg: 230 60% 97%;
+    --brand-dark: 0 0% 6%;
+
+    --gradient-brand: linear-gradient(90deg, hsl(245 80% 22%) 0%, hsl(270 55% 40%) 100%);
+    --gradient-hero-overlay: linear-gradient(180deg, hsl(0 0% 0% / 0.1) 0%, hsl(0 0% 0% / 0.4) 100%);
+
+    --shadow-card: 0 8px 30px -10px hsl(245 75% 25% / 0.15);
+    --shadow-bar: 0 10px 30px -8px hsl(245 75% 25% / 0.35);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 240 60% 8%;
+    --foreground: 0 0% 98%;
+    --card: 240 60% 10%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 60% 10%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 270 60% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 30% 18%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 30% 18%;
+    --muted-foreground: 240 10% 70%;
+    --accent: 270 60% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 30% 18%;
+    --input: 240 30% 18%;
+    --ring: 270 60% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+@layer utilities {
+  .bg-brand-gradient {
+    background: var(--gradient-brand);
+  }
+  .text-brand-navy {
+    color: hsl(var(--brand-navy));
+  }
+  .bg-brand-navy {
+    background-color: hsl(var(--brand-navy));
+  }
+  .bg-brand-light {
+    background-color: hsl(var(--brand-light-bg));
+  }
+  .shadow-brand-bar {
+    box-shadow: var(--shadow-bar);
+  }
+  .shadow-brand-card {
+    box-shadow: var(--shadow-card);
+  }
+}
